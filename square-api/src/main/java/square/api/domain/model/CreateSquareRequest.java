@@ -3,13 +3,11 @@ package square.api.domain.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import javax.validation.constraints.NotNull;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonDeserialize(builder = CreateSquareRequest.Builder.class)
 public class CreateSquareRequest {
 
-  @NotNull(message = "Number must not be empty")
   private final int number;
 
   private CreateSquareRequest(Builder builder) {
